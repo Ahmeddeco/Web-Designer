@@ -12,7 +12,7 @@ const About = () => {
         <h2 className='section-title'>
           {about.title} <span className='dot'></span>
         </h2>
-        <p className='sectioin-subtitle lg:mb-[60px]'>{about.subtitle}</p>
+        <p className='sectioin-subtitle text-center lg:mb-[60px]'>{about.subtitle}</p>
         {/* image */}
         <div className=''>
           {/* circule */}

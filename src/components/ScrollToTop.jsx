@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { RiArrowUpLine } from "react-icons/ri";
+import { animateScroll as scroll } from "react-scroll";
 
 const ScrollToTop = () => {
-  return <div>ScrollToTop</div>;
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      return window.scrollY > 200 ? setShow(true) : setShow(false);
+    });
+  });
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+  return (
+    show && (
+      <button
+        onClick={() => scrollToTop()}
+        className='btn bg-accent w-14 h-14 fixed bottom-[10%] right-[10%] z-50 transition-all rounded-full'
+      >
+        <div className='text-3xl'>
+          <RiArrowUpLine />
+        </div>
+      </button>
+    )
+  );
 };
 
 export default ScrollToTop;
