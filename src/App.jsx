@@ -6,6 +6,7 @@ import Services from "./components/Services";
 import Contributors from "./components/Contributors";
 import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -16,7 +17,8 @@ const App = () => {
       <Services />
       <Contributors />
       <Portfolio />
-      <Contact/>
+      <Contact />
+      <Footer />
     </>
   );
 };
